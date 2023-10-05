@@ -14,7 +14,7 @@ def eval_calc():
         calculation = str(sympify(calculation))
         text_result.delete(1.0, "end")
         text_result.insert(1.0, calculation)
-    except:
+    except ZeroDivisionError:
         clearfield()
         text_result.insert(1.0, "Error")
     
